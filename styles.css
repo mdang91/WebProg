@@ -2,12 +2,15 @@
     display: grid;
     grid-template-rows:  1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+	place-items: center;
 }
 .word{
+	padding: 50px;
 	background-image: url("letter.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 body{
-	
 	margin: 0;
 	padding:0;
 	display: flex;
@@ -17,6 +20,8 @@ body{
 	font-family: 'Montserrat', sans-serif;
 }
 img{
+	width:200px; 
+	height:253px;
 	border-radius: 6px;
 }
 .wrapper {
@@ -30,9 +35,9 @@ img{
 }
 .card {
 	width: 200px;
-	height: 250px;
-	margin: 1em;
-	perspective: 1500px;
+	height: 253px;
+	margin: 0.5em;
+	perspective: 1000px;
 }
 .card .content {
 		position: relative;
@@ -125,7 +130,7 @@ img{
 
 
 .description{
-	grid-row: 5;
+	grid-row:5;
 	grid-column: 1/-1;
 	font-size: 0.86em;
 	border-radius: 5px;
