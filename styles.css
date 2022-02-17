@@ -1,3 +1,21 @@
+@keyframes backgroundColorPalette {
+  0% {
+    background: #ee6055;
+  }
+  25% {
+    background: #60d394;
+  }
+  50% {
+    background: #aaf683;
+  }
+  75% {
+    background: #ffd97d;
+  }
+  100% {
+    background: #ff9b85;
+  }
+}
+
 .Game_Screen{
     display: grid;
     grid-template-rows:  1fr 1fr 1fr;
@@ -19,8 +37,11 @@
 	border-bottom: 3px outset rgba(164,33,33,0.84);
 }
 body{
-	background-image: url("bg.jpg");
-	margin: 0;
+  animation-name: backgroundColorPalette;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  margin: 0;
 	padding:0;
 	display: flex;
 	flex-direction: column;
@@ -111,7 +132,7 @@ img{
 }
 .card-font{
 	font-size:100px;
-	margin:0;
+	margin-top: 70%;
 }
 .front h2{ 
 	grid-row:1;
@@ -192,7 +213,11 @@ img{
 /* color when moving mouse*/
 .button:hover{
 	background-color: transparent;
-	box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 20px rgba(255, 5, 5, 5);
+  transform: translateY(-8px);
+  height:259px;
+	border-color: white;
+
 	text-shadow: none;
 	color: #355cc9;
 }
