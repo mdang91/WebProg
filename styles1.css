@@ -15,7 +15,6 @@
   100% {
     background: #ff9b85;
   }
-  
 }
 
 .Game_Screen{
@@ -27,6 +26,11 @@
 .outside{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+	transform: translateX(100%);
+	transition: transform 400ms ease-in-out;
+}
+.outside .is-show{
+	transform: translateX(0);
 }
 .container{
 	padding:50px;
@@ -78,6 +82,7 @@ img{
 	margin:0px;
 }
 h1{
+	grid-row:2;
 	text-align:center;
 }
 .htp{
