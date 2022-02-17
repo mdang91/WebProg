@@ -64,8 +64,8 @@ body{
 	text-transform: none;
 }
 img{
-	width:200px; 
-	height:253px;
+	width:150px; 
+	height:203px;
 	border-radius: 6px;
 }
 .wrapper{
@@ -90,8 +90,8 @@ h1{
 }
 	
 .card{
-	width: 200px;
-	height: 253px;
+	width: 150px;
+	height: 203px;
 	margin: 0.5em;
 	perspective: 1000px;
 }
@@ -207,8 +207,8 @@ h1{
 
 .button{
 	grid-row:-2;
-	width:200px;
-	height:250px;
+	width:150px;
+	height:200px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 600;
@@ -232,7 +232,7 @@ h1{
 	background-color: transparent;
 	box-shadow: 0 0 20px rgba(255, 5, 5, 5);
   transform: translateY(-8px);
-  height:259px;
+  height:209px;
 	border-color: white;
 
 	text-shadow: none;
@@ -267,7 +267,7 @@ h1{
     border-radius: 5ch;
     perspective: 1000px;
 	margin-top:50px;
-	margin-left:50px;
+	margin-left:100px;
   }
   
   .card1-inner {
