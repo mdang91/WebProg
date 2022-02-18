@@ -16,42 +16,89 @@
     background: #ff9b85;
   }
 }
+/*banner part*/
+.banner{
+	display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+	background-color: #0896B2;
+	height:90px;
+	width:100%;
+	box-shadow: 5px 5px 15px 5px #4C60FF;
+	border-bottom: 4px outset #1C35A4;
+}
+.logo{
+    grid-column:1/3;
+	margin-left:30px;
+}
+#bannertext{
+	grid-column:5;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+ .ul1{
+    display:flex;
+	list-style:none;
+ }
+ .li1{
+    margin-right:3em;
+    margin-bottom:0;
+	font-size:20px;
+ }
+ #a1{
+	border: none;
+	background: transparent;
+	color: #fff;
+	padding: 10px;
+	font-size: 20px;
+	border-radius: 5px;
+	position: relative;
+	box-sizing: border-box;
+	transition: all 500ms ease; 
+ }
+ #a1:hover{
+  color: #203A43;
+  border: #203A43 solid 1px;
+  background:#fff;
+}
+/*logo*/
+#img2{
+	width:280px;
+	height:90px;
+}
 
-.Game_Screen{
+
+/*main part*/
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.gamewindow{
+	padding:50px;
+	background-image: url("space.jpeg");
+	background-repeat: no-repeat;
+	width:700px;
+	height:900px;
+}
+.displaycard{
     display: grid;
     grid-template-rows:  1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
 }
-.outside{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-	transform: translateX(100%);
-	transition: transform 400ms ease-in-out;
-}
-.outside .is-show{
-	transform: translateX(0);
-}
-.container{
-	padding:50px;
-	background-image: url("letter.png");
-	background-repeat: no-repeat;
-	background-size: 100%;
-}
-.banner{
-	background-color: #A0431D;
-	height:70px;
-	width:100%;
-	text-align:center;
-	box-shadow: 5px 5px 5px 0px #000000;
-	border-bottom: 3px outset rgba(164,33,33,0.84);
+/*card image*/
+.img1{
+	width:150px; 
+	height:203px;
+	border-radius: 6px;
+	background: linear-gradient(to left, #2C5364, #203A43, #0F2027);
 }
 body{
-  animation-name: backgroundColorPalette;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  margin: 0;
+	animation-name: backgroundColorPalette;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	margin: 0;
 	padding:0;
 	display: flex;
 	flex-direction: column;
@@ -67,33 +114,39 @@ body{
 	font-variant: normal;
 	text-transform: none;
 }
-img{
-	width:150px; 
-	height:203px;
-	border-radius: 6px;
-}
-.wrapper{
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-}
-.pos1{
+
+.clickable{
 	position:absolute;
 	margin:0px;
 }
 h1{
 	grid-row:2;
 	text-align:center;
+	color:white;
+	font-size:36px;
 }
-.htp{
-	background-color: #FCDCAE;
-	width:400px;
-	height:500px;
-	margin-top:50px;
-	margin-left:50px;
+#h2{ 
+	grid-row:1;
+	font-size:20px;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight:bold;
+	text-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+#hint{
+	color:white;
+	text-align:left;
+	font-size:20px;
+	margin-right:10px;
+}
+
+/*card image*/
+.img1{
+	width:150px; 
+	height:203px;
 	border-radius: 6px;
+	background: linear-gradient(to left, #2C5364, #203A43, #0F2027);
 }
-	
 .card{
 	width: 150px;
 	height: 203px;
@@ -101,12 +154,11 @@ h1{
 	perspective: 1000px;
 }
 .card .content{
-		position: relative;
-		width: 100%;
-		height: 100%;
-		transform-style: preserve-3d;
-		transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
-
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
 }
 .more{
 	display: none;
@@ -114,7 +166,6 @@ h1{
 .more:checked ~ .content{
 	transform: rotateY(180deg);
 }
-
 .front,.back{
 	position: absolute;
 	top: 0;
@@ -125,14 +176,12 @@ h1{
 	transform-style: preserve-3d;
 	border-radius: 6px;
 }
-
 .front .inner,
 .back .inner{
 	height: 100%;
 	display: grid;
 	transform: translateZ(80px) scale(0.94);
 }
-
 .front{
 	background-color: #fff;
 }
@@ -156,13 +205,6 @@ h1{
 	font-size:100px;
 	margin-top: 70%;
 }
-.front h2{ 
-	grid-row:1;
-	text-transform: uppercase;
-	color: #fff;
-	font-weight:500;
-	text-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-}
 .front .rating{
 	grid-row:3;
 	color: rgba(255, 255, 255, 0.8);
@@ -184,32 +226,7 @@ h1{
 	justify-self: center;
 }
 
-
-.description{
-	grid-row:5;
-	grid-column: 1/-1;
-	font-size: 0.86em;
-	border-radius: 5px;
-	font-weight: 600;
-	line-height: 1.4em;
-	overflow: auto;
-	color: white;
-	padding-right: 10px;
-}
-
-.location,.price{
-	font-weight:600;
-	color: white;
-	grid-row: 1;
-	font-size: 0.86em;
-}
-
-.location{
-	grid-column: 1/3;
-	justify-self: left;
-}
-
-
+/*card button*/
 .button{
 	grid-row:-2;
 	width:150px;
@@ -232,38 +249,29 @@ h1{
 	text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-/* color when moving mouse*/
+/* color when moving mouse on card*/
 .button:hover{
 	background-color: transparent;
 	box-shadow: 0 0 20px rgba(255, 5, 5, 5);
-  transform: translateY(-8px);
-  height:209px;
+	transform: translateY(-8px);
+	height:209px;
 	border-color: white;
-
 	text-shadow: none;
 	color: #355cc9;
 }
-
 .button .return{
 	line-height: 3em;
 	color: #355cc9;
 	border-color: #355cc9;
 	text-shadow: none;
 }
-/*
-.button:hover{
-	background-color: #355cc9;
-	color: #fff;
-	box-shadow: none;
-}*/
-
 .clear:after{
     clear:both;
     content:"";
     display:table;
 }
 
-
+/*how to play part*/
 .card1 {
     border-color: rgb(172, 172, 172);
     background-color: transparent;
@@ -273,37 +281,122 @@ h1{
     perspective: 1000px;
 	margin-top:50px;
 	margin-left:100px;
-  }
-  
-  .card1-inner {
+	align-items:center;
+ }
+.card1-front{
+    background-color: #1F6DCB;
+    border-radius: 3ch;
+ }
+.card1-back{
+    background-color: rgb(110, 6, 158);
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 3ch;
+	display:grid;
+	grid-row:2;
+ }
+.card1-inner{
     width: 100%;
     height: 100%;
     text-align: center;
     transition: transform 1s;
     transform-style: preserve-3d;
-  }
-  
-  .card1:hover .card1-inner {
+ }
+.card1:hover .card1-inner{
     transform: rotateY(180deg);
-  }
+ }
   
-  .card1-front, .card1-back {
+.card1-front, .card1-back{
     position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
-  }
-  
-  .card1-front {
-    background-color: #FCDCAE;
-    border-radius: 3ch;
+ }
+ 
+ /* anmimation for the banner */
+@keyframes animate{
+from{
+	transform: translateY(+100%) rotate(180deg)
+}
+to{
+	transform: translateY(-500%)
+	rotate(360deg)
+}
+}
+.appos{
+	text-align:center;
+}
+.app{
+	background: linear-gradient(to left, #2C5364, #203A43, #0F2027);
+	height:90px;
+	width:100%;
+}
+.ul2{
+  display:block;
+  width:100%;
+  height:inherit;
+}
+.ul2{
+  list-style-type:none;
+}
+.li2:nth-child(1)
+{
+  position:absolute;
+  left:10%;
+  height:30px;
+  width:30px;
+  content: url("game.png");
+}
+.li2:nth-child(2)
+{
+  position:absolute;
+  left:30%;
+  height:45px;
+  width:45px;
+  content: url("game.png");
+}
+.li2:nth-child(3)
+{
+  position:absolute;
+  left:50%;
+  height:70px;
+  width:70px;
+  content: url("game.png");
+}
+.li2:nth-child(4)
+{
+  position:absolute;
+  left:70%;
+  height:20px;
+  width:20px;
+  content: url("game.png");
+}
+.li2:nth-child(5)
+{
+  position:absolute;
+  left:90%;
+  height:15px;
+  width:15px;
+  content: url("game.png");
+}
+.li2{
+  animation:animate 15s linear 1s infinite;
+}
 
-  }
-  
-  .card1-back {
-    background-color: rgb(110, 6, 158);
-    color: white;
-    transform: rotateY(180deg);
-    border-radius: 3ch;
-  }
+#footer{
+	width:100%;
+	height:150px;
+	background: linear-gradient(#e66465, #9198e5);
+}
+.about{
+	margin-left:50px;
+	color:white;
+	font-weight:normal;
+	font-size:15px;
+	text-align:center;
+	
+}
+
+
+
