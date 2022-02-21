@@ -1,461 +1,527 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles.css">
-
-	<title>Home</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	<link rel="shortcut icon" href="icon.png" />
+    <title>Word Game</title>
 </head>
 
 <body>
-	<nav class="banner">
-		<center>
-			<h1>Make a Word</h1>
-		</center>
+<!--Top of the page -->
+<header class="banner app">
+<div class="logo">
+<a href="#"><img src="logo.png" id="img2" alt="Logo"></a> <!--Logo-->
+</div>
+<!-- Navigation bar -->
+<div id="bannertext">
+	<ul class="ul1">
+		<li class="li1"><a href="#" class="a1">Home</a></li>
+		<li class="li1"><a href="#" class="a1">More Game</a></li>
+		<li class="li1"><a href="g12.html" class ="a1">About Us</a></li>
+	</ul>
+</div>
+<!-- Spaceship Animation -->
+<div >
+<ul class="ul2">
+    <li class="li2"></li>
+    <li class="li2"></li>
+    <li class="li2"></li>
+    <li class="li2"></li>
+    <li class="li2"></li>
+</ul>
+</div>
+</header>
+<!--Begin Game Windows -->
+<div class="container">
+<!-- "How to play" card -->
+<div class="card1">
+	<div class="card1-inner">
+        <div class="card1-front">
+			<h1 id="h1">Make a Word</h1>
+			<h2 id="h2">How to play?</h2>
+			<ul id="hint">
+            <li>Open each card.</li>
+            <li>Make a word from the letters that are highlighted.</li>
+			<li>Can you guess???</li>
+			<li>Check your answer in the back of this board.</li>
+			</ul>
+        </div>
+        <div class="card1-back">
+			<p id="answer">Answer: Apple</p>
+        </div>
+    </div>
+</div>
+<!-- Main game -->
+<div class="gamewindow">
+<h1 id="level1"> Level 1 </h1>
+<div class="displaycard">
 
-		<a id="btn" href="#">Learn about this game </a>
-	</nav>
-	<div class="container">
-		<div class="Game_Screen">
-			<!--Begin Card 1 -->
-			<div class="card">
-				<input type="checkbox" id="card1" class="more">
-				<div class="content">
-					<div class="front">
-						<div class="inner">
-							<div>
-								<img src="pic1.jpg" alt="Avatar" class="img">
-							</div>
-							<div class="pos1">
-								<label for="card1" class="button"></label>
-							</div>
-						</div>
+    <!--Begin Card 1 -->
+    <div class="card">
+	<input type="checkbox" id="card1" class="more">
+		<div class="content">
+			<div class="front">
+				<div class="inner">
+					<div>
+					<img src="game.png" alt="Avatar" class="img1">
 					</div>
-					<div class="back">
-						<div class="inner">
-							<div>
-								<h2 class="card-font">A</h2>
-
-							</div>
-							<div class="pos1">
-								<label for="card1" class="button return"></label>
-							</div>
-						</div>
+					<div class="clickable">
+					<label for="card1" class="button"></label>
 					</div>
 				</div>
 			</div>
-			<!--End Card 1 -->
-
-			<!--Begin Card 2 -->
-			<div class="card">
-				<input type="checkbox" id="card2" class="more">
-				<div class="content">
-					<div class="front">
-						<div class="inner">
-							<div>
-								<img src="pic1.jpg" alt="Avatar" class="img">
-							</div>
-							<div class="pos1">
-								<label for="card2" class="button"></label>
-							</div>
-						</div>
+			<div class="back">
+				<div class="inner" style="background-color:#49FF00;">
+					<div>
+					<h2 class="card-font">A</h2>
+				
 					</div>
-					<div class="back">
-						<div class="inner">
-							<div>
-								<h2 class="card-font">A</h2>
-							</div>
-							<div class="pos1">
-								<label for="card2" class="button return"></label>
-							</div>
-						</div>
+					<div class="clickable">
+					<label for="card1" class="button return"></label>
 					</div>
 				</div>
 			</div>
-
-			<!--Begin Card 3 -->
-			<div class="card">
-				<input type="checkbox" id="card3" class="more">
-				<div class="content">
-					<div class="front">
-						<div class="inner">
-							<div>
-								<img src="pic1.jpg" alt="Avatar" class="img">
-							</div>
-							<div class="pos1">
-								<label for="card3" class="button"></label>
-							</div>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<div>
-								<h2 class="card-font">A</h2>
-							</div>
-							<div class="pos1">
-								<label for="card3" class="button return"></label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!--Begin Card 4 -->
-			<div class="card">
-				<input type="checkbox" id="card4" class="more">
-				<div class="content">
-					<div class="front">
-						<div class="inner">
-							<div>
-								<img src="pic1.jpg" alt="Avatar" class="img">
-							</div>
-							<div class="pos1">
-								<label for="card4" class="button"></label>
-							</div>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<div>
-								<h2 class="card-font">A</h2>
-							</div>
-							<div class="pos1">
-								<label for="card4" class="button return"></label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!--Begin Card 5 -->
-			<div class="card">
-				<input type="checkbox" id="card5" class="more">
-				<div class="content">
-					<div class="front">
-						<div class="inner">
-							<div>
-								<img src="pic1.jpg" alt="Avatar" class="img">
-							</div>
-							<div class="pos1">
-								<label for="card5" class="button"></label>
-							</div>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<div>
-								<h2 class="card-font">A</h2>
-							</div>
-							<div class="pos1">
-								<label for="card5" class="button return"></label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!--Begin Card 6 -->
-			<div class="card">
-				<input type="checkbox" id="card6" class="more">
-				<div class="content">
-					<div class="front">
-						<div class="inner">
-							<div>
-								<img src="pic1.jpg" alt="Avatar" class="img">
-							</div>
-							<div class="pos1">
-								<label for="card6" class="button"></label>
-							</div>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<div>
-								<h2 class="card-font">A</h2>
-							</div>
-							<div class="pos1">
-								<label for="card6" class="button return"></label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!--Begin Card 6 -->
-			<div class="card">
-				<input type="checkbox" id="card7" class="more">
-				<div class="content">
-					<div class="front">
-						<div class="inner">
-							<div>
-								<img src="pic1.jpg" alt="Avatar" class="img">
-							</div>
-							<div class="pos1">
-								<label for="card7" class="button"></label>
-							</div>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<div>
-								<h2 class="card-font">A</h2>
-							</div>
-							<div class="pos1">
-								<label for="card7" class="button return"></label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!--Begin Card 8 -->
-			<div class="card">
-				<input type="checkbox" id="card8" class="more">
-				<div class="content">
-					<div class="front">
-						<div class="inner">
-							<div>
-								<img src="pic1.jpg" alt="Avatar" class="img">
-							</div>
-							<div class="pos1">
-								<label for="card8" class="button"></label>
-							</div>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<div>
-								<h2 class="card-font">A</h2>
-							</div>
-							<div class="pos1">
-								<label for="card8" class="button return"></label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!--Begin Card 9 -->
-			<div class="card">
-				<input type="checkbox" id="card9" class="more">
-				<div class="content">
-					<div class="front">
-						<div class="inner">
-							<div>
-								<img src="pic1.jpg" alt="Avatar" class="img">
-							</div>
-							<div class="pos1">
-								<label for="card9" class="button"></label>
-							</div>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<div>
-								<h2 class="card-font">A</h2>
-							</div>
-							<div class="pos1">
-								<label for="card9" class="button return"></label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!--Begin Card 10 -->
-			<div class="card">
-				<input type="checkbox" id="card10" class="more">
-				<div class="content">
-					<div class="front">
-						<div class="inner">
-							<div>
-								<img src="pic1.jpg" alt="Avatar" class="img">
-							</div>
-							<div class="pos1">
-								<label for="card10" class="button"></label>
-							</div>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<div>
-								<h2 class="card-font">A</h2>
-							</div>
-							<div class="pos1">
-								<label for="card10" class="button return"></label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!--Begin Card 11 -->
-			<div class="card">
-				<input type="checkbox" id="card11" class="more">
-				<div class="content">
-					<div class="front">
-						<div class="inner">
-							<div>
-								<img src="pic1.jpg" alt="Avatar" class="img">
-							</div>
-							<div class="pos1">
-								<label for="card11" class="button"></label>
-							</div>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<div>
-								<h2 class="card-font">A</h2>
-							</div>
-							<div class="pos1">
-								<label for="card11" class="button return"></label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!--Begin Card 12 -->
-			<div class="card">
-				<input type="checkbox" id="card12" class="more">
-				<div class="content">
-					<div class="front">
-						<div class="inner">
-							<div>
-								<img src="pic1.jpg" alt="Avatar" class="img">
-							</div>
-							<div class="pos1">
-								<label for="card12" class="button"></label>
-							</div>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<div>
-								<h2 class="card-font">A</h2>
-							</div>
-							<div class="pos1">
-								<label for="card12" class="button return"></label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!--Begin Card 13 -->
-			<div class="card">
-				<input type="checkbox" id="card13" class="more">
-				<div class="content">
-					<div class="front">
-						<div class="inner">
-							<div>
-								<img src="pic1.jpg" alt="Avatar" class="img">
-							</div>
-							<div class="pos1">
-								<label for="card13" class="button"></label>
-							</div>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<div>
-								<h2 class="card-font">A</h2>
-							</div>
-							<div class="pos1">
-								<label for="card13" class="button return"></label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!--Begin Card 14 -->
-			<div class="card">
-				<input type="checkbox" id="card14" class="more">
-				<div class="content">
-					<div class="front">
-						<div class="inner">
-							<div>
-								<img src="pic1.jpg" alt="Avatar" class="img">
-							</div>
-							<div class="pos1">
-								<label for="card14" class="button"></label>
-							</div>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<div>
-								<h2 class="card-font">A</h2>
-							</div>
-							<div class="pos1">
-								<label for="card14" class="button return"></label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!--Begin Card 15 -->
-			<div class="card">
-				<input type="checkbox" id="card15" class="more">
-				<div class="content">
-					<div class="front">
-						<div class="inner">
-							<div>
-								<img src="pic1.jpg" alt="Avatar" class="img">
-							</div>
-							<div class="pos1">
-								<label for="card15" class="button"></label>
-							</div>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<div>
-								<h2 class="card-font">A</h2>
-							</div>
-							<div class="pos1">
-								<label for="card15" class="button return"></label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!--Begin Card 16 -->
-			<div class="card">
-				<input type="checkbox" id="card16" class="more">
-				<div class="content">
-					<div class="front">
-						<div class="inner">
-							<div>
-								<img src="pic1.jpg" alt="Avatar" class="img">
-							</div>
-							<div class="pos1">
-								<label for="card16" class="button"></label>
-							</div>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<div>
-								<h2 class="card-font">A</h2>
-							</div>
-							<div class="pos1">
-								<label for="card16" class="button return"></label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
 		</div>
-	</div>
-</body>
+    </div>
+    <!--End Card 1 -->
+	
+	<!--Begin Card 2 -->
+	<div class="card">
+	<input type="checkbox" id="card2" class="more">
+		<div class="content">
+			<div class="front">
+				<div class="inner">
+					<div>
+					<img src="game.png" alt="Avatar" class="img1">
+					</div>
+					<div class="clickable">
+					<label for="card2" class="button"></label>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="inner">
+					<div>
+					<h2 class="card-font">C</h2>
+					</div>
+					<div class="clickable">
+					<label for="card2" class="button return"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+	<!--Begin Card 3 -->
+	<div class="card">
+	<input type="checkbox" id="card3" class="more">
+		<div class="content">
+			<div class="front">
+				<div class="inner">
+					<div>
+					<img src="game.png" alt="Avatar" class="img1">
+					</div>
+					<div class="clickable">
+					<label for="card3" class="button"></label>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="inner">
+					<div>
+					<h2 class="card-font">A</h2>
+					</div>
+					<div class="clickable">
+					<label for="card3" class="button return"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+	<!--Begin Card 4 -->
+	<div class="card">
+	<input type="checkbox" id="card4" class="more">
+		<div class="content">
+			<div class="front">
+				<div class="inner">
+					<div>
+					<img src="game.png" alt="Avatar" class="img1">
+					</div>
+					<div class="clickable">
+					<label for="card4" class="button"></label>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="inner">
+					<div>
+					<h2 class="card-font">R</h2>
+					</div>
+					<div class="clickable">
+					<label for="card4" class="button return"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+	<!--Begin Card 5 -->
+	<div class="card">
+	<input type="checkbox" id="card5" class="more">
+		<div class="content">
+			<div class="front">
+				<div class="inner">
+					<div>
+					<img src="game.png" alt="Avatar" class="img1">
+					</div>
+					<div class="clickable">
+					<label for="card5" class="button"></label>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="inner">
+					<div>
+					<h2 class="card-font">I</h2>
+					</div>
+					<div class="clickable">
+					<label for="card5" class="button return"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+	<!--Begin Card 6 -->
+	<div class="card">
+	<input type="checkbox" id="card6" class="more">
+		<div class="content">
+			<div class="front">
+				<div class="inner">
+					<div>
+					<img src="game.png" alt="Avatar" class="img1">
+					</div>
+					<div class="clickable">
+					<label for="card6" class="button"></label>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="inner">
+					<div>
+					<h2 class="card-font">S</h2>
+					</div>
+					<div class="clickable">
+					<label for="card6" class="button return"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+	<!--Begin Card 8 -->
+	<div class="card">
+	<input type="checkbox" id="card7" class="more">
+		<div class="content">
+			<div class="front">
+				<div class="inner">
+					<div>
+					<img src="game.png" alt="Avatar" class="img1">
+					</div>
+					<div class="clickable">
+					<label for="card7" class="button"></label>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="inner" style="background-color:#49FF00;">
+					<div>
+					<h2 class="card-font">L</h2>
+					</div>
+					<div class="clickable">
+					<label for="card7" class="button return"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+	<!--Begin Card 8 -->
+	<div class="card">
+	<input type="checkbox" id="card8" class="more">
+		<div class="content">
+			<div class="front">
+				<div class="inner">
+					<div>
+					<img src="game.png" alt="Avatar" class="img1">
+					</div>
+					<div class="clickable">
+					<label for="card8" class="button"></label>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="inner">
+					<div>
+					<h2 class="card-font">A</h2>
+					</div>
+					<div class="clickable">
+					<label for="card8" class="button return"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+	<!--Begin Card 9 -->
+	<div class="card">
+	<input type="checkbox" id="card9" class="more">
+		<div class="content">
+			<div class="front">
+				<div class="inner">
+					<div>
+					<img src="game.png" alt="Avatar" class="img1">
+					</div>
+					<div class="clickable">
+					<label for="card9" class="button"></label>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="inner" style="background-color:#49FF00;">
+					<div>
+					<h2 class="card-font">P</h2>
+					</div>
+					<div class="clickable">
+					<label for="card9" class="button return"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+	<!--Begin Card 10 -->
+	<div class="card">
+	<input type="checkbox" id="card10" class="more">
+		<div class="content">
+			<div class="front">
+				<div class="inner">
+					<div>
+					<img src="game.png" alt="Avatar" class="img1">
+					</div>
+					<div class="clickable">
+					<label for="card10" class="button"></label>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="inner" style="background-color:#49FF00;">
+					<div>
+					<h2 class="card-font">E</h2>
+					</div>
+					<div class="clickable">
+					<label for="card10" class="button return"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+	<!--Begin Card 11 -->
+		<div class="card">
+	<input type="checkbox" id="card11" class="more">
+		<div class="content">
+			<div class="front">
+				<div class="inner">
+					<div>
+					<img src="game.png" alt="Avatar" class="img1">
+					</div>
+					<div class="clickable">
+					<label for="card11" class="button"></label>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="inner">
+					<div>
+					<h2 class="card-font">N</h2>
+					</div>
+					<div class="clickable">
+					<label for="card11" class="button return"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+	<!--Begin Card 12 -->
+	<div class="card">
+	<input type="checkbox" id="card12" class="more">
+		<div class="content">
+			<div class="front">
+				<div class="inner">
+					<div>
+					<img src="game.png" alt="Avatar" class="img1">
+					</div>
+					<div class="clickable">
+					<label for="card12" class="button"></label>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="inner">
+					<div>
+					<h2 class="card-font">E</h2>
+					</div>
+					<div class="clickable">
+					<label for="card12" class="button return"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+	<!--Begin Card 13 -->
+		<div class="card">
+	<input type="checkbox" id="card13" class="more">
+		<div class="content">
+			<div class="front">
+				<div class="inner">
+					<div>
+					<img src="game.png" alt="Avatar" class="img1">
+					</div>
+					<div class="clickable">
+					<label for="card13" class="button"></label>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="inner">
+					<div>
+					<h2 class="card-font">J</h2>
+					</div>
+					<div class="clickable">
+					<label for="card13" class="button return"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+	<!--Begin Card 14 -->
+		<div class="card">
+	<input type="checkbox" id="card14" class="more">
+		<div class="content">
+			<div class="front">
+				<div class="inner">
+					<div>
+					<img src="game.png" alt="Avatar" class="img1">
+					</div>
+					<div class="clickable">
+					<label for="card14" class="button"></label>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="inner">
+					<div>
+					<h2 class="card-font">E</h2>
+					</div>
+					<div class="clickable">
+					<label for="card14" class="button return"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+	<!--Begin Card 15 -->
+		<div class="card">
+	<input type="checkbox" id="card15" class="more">
+		<div class="content">
+			<div class="front">
+				<div class="inner">
+					<div>
+					<img src="game.png" alt="Avatar" class="img1">
+					</div>
+					<div class="clickable">
+					<label for="card15" class="button"></label>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="inner">
+					<div>
+					<h2 class="card-font">E</h2>
+					</div>
+					<div class="clickable">
+					<label for="card15" class="button return"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
 
+	<!--Begin Card 16 -->
+	<div class="card">
+	<input type="checkbox" id="card16" class="more">
+		<div class="content">
+			<div class="front">
+				<div class="inner">
+					<div>
+					<img src="game.png" alt="Avatar" class="img1">
+					</div>
+					<div class="clickable">
+					<label for="card16" class="button"></label>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="inner" style="background-color:#49FF00;">
+					<div>
+					<h2 class="card-font">P</h2>
+					</div>
+					<div class="clickable">
+					<label for="card16" class="button return"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+</div>
+<!-- Level List -->
+<div class="card2">
+	<h1>Level List</h1>
+	<ul>
+		<li><a href="#level1" class="a2">Level 1</a></li>
+        <li><a href="#" class="a2">Level 2</a></li>
+		<li><a href="#" class="a2">Level 3</a></li>
+		<li><a href="#" class="a2">Level 4</a></li>
+		<li><a href="#" class="a2">Level 5</a></li>
+		<li><a href="#" class="a2">Level 6</a></li>
+		<li><a href="#" class="a2">Level 7</a></li>
+		<li><a href="#" class="a2">Level 8</a></li>
+		<li><a href="#" class="a2">Level 9</a></li>
+		<li><a href="#" class="a2">Level 10</a></li>
+	</ul>
+</div>
+</div>
+<!-- Bottom -->
+<footer class="clfooter">
+<div class="about">
+<img src="contact.png" alt="Contact" class="img2">
+<ul id="contact">
+<li> Contact us: G12Gaming</li>
+<li> Address: P.O. Box 3965 Atlanta, GA 30302-3965 </li>
+<li> Phone: 404-413-2000</li>
+<li> Email: gsu@student.gsu.edu</li>
+</ul>
+</div>
+</footer>
+</body>
 </html>
